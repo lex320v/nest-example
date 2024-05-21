@@ -1,4 +1,4 @@
-import { DataSourceOptions } from 'typeorm';
+import { DataSource, DataSourceOptions } from 'typeorm';
 
 const config: DataSourceOptions = {
   type: 'postgres',
@@ -8,7 +8,9 @@ const config: DataSourceOptions = {
   password: 'toor',
   database: 'nest',
   entities: [__dirname + '/**/*.entity{.ts,.js}'],
-  synchronize: true,
+  synchronize: false,
+  migrations: [__dirname + '/migrations/*{.ts,.js}'],
 };
 
 export default config;
+export const connectionSource = new DataSource(config as DataSourceOptions);
