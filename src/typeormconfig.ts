@@ -7,6 +7,8 @@ const config: DataSourceOptions = {
   username: 'postgres',
   password: 'toor',
   database: 'nest',
+  entities: [__dirname + '/**/*.entity{.ts,.js}'],
+  synchronize: true,
 };
 
 export default config;
