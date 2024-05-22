@@ -5,7 +5,7 @@ const config: DataSourceOptions = {
   host: 'localhost',
   port: 5432,
   username: 'postgres',
-  password: 'toor',
+  password: '0000',
   database: 'nest',
   entities: [__dirname + '/**/*.entity{.ts,.js}'],
   synchronize: false,
